@@ -24,6 +24,13 @@ module.exports = function(app, passport) {
         });
     });
 
+    //Home Page
+    app.get('/home',isLoggedIn, function(req,res){
+        res.render('home.ejs',{
+            user: req.user
+        });
+    });
+
 // =============================================================================
 // AUTHENTICATE (FIRST LOGIN) ==================================================
 // =============================================================================
@@ -189,6 +196,8 @@ module.exports = function(app, passport) {
 
 
 };
+
+
 
 // route middleware to ensure user is logged in
 function isLoggedIn(req, res, next) {
