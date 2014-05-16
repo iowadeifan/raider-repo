@@ -10,7 +10,8 @@ module.exports = function(app, passport) {
     // PROFILE SECTION =========================
     app.get('/profile', isLoggedIn, function(req, res) {
         res.render('profile.ejs', {
-            user : req.user
+            user : req.user,
+            active: 'profile'
         });
     });
 
@@ -27,14 +28,16 @@ module.exports = function(app, passport) {
     //Home Page
     app.get('/home',isLoggedIn, function(req,res){
         res.render('home.ejs',{
-            user: req.user
+            user: req.user,
+            active: 'home'
         });
     });
     
     //Registration
     app.get('/registration',isLoggedIn, function(req,res){
         res.render('registration.ejs',{
-            user: req.user
+            user: req.user,
+            active: 'registration'
         });
     });
 
