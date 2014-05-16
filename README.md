@@ -1,4 +1,3 @@
-First Project that follows the tutorial: 
-http://scotch.io/tutorials/javascript/easy-node-authentication-setup-and-local
-=======
+Learning project to integrate concepts of Node.js, Passport.js, Express.js and Twitter
+====
 

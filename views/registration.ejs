@@ -1,22 +1,37 @@
-<!-- views/index.ejs -->
-<!doctype html>
-<html>
-<head>
-	<title>Project Learn: Home</title>
-	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> <!-- load bootstrap css -->
-	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
-	<style>
-		body 		{ padding-top:80px; }
-	</style>
-</head>
-<body>
-<div class="container">
 
-	<div class="jumbotron text-center">
-		<h1><span class="fa fa-calendar"></span> Build out a registration page</h1>
-		<a href="/home" class="btn btn-default"><span class="fa fa-home"></span> Home</a>
-	</div>
+<% layout('layout') -%>
+
+<div class="col-sm-6 col-sm-offset-3">
+
+	<h1><span class="fa fa-calendar"></span> Registration</h1>
+
+
+	<!-- REGISTRATION FORM -->
+	<form action="/signup" method="post">
+		<div class="form-group">
+			<label>First Name</label>
+			<input type="text" class="form-control" name="firstName">
+		</div>
+		<div class="form-group">
+			<label>Last Name</label>
+			<input type="text" class="form-control" name="lastName">
+		</div>
+		<div class="form-group">
+			<div class="radio">
+				<label>
+					<input type="radio" name="optionsRadios" id="optionsRadios1"> April 2014
+				</label>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="radio">
+				<label>
+					<input type="radio" name="optionsRadios" id="optionsRadios2"> June 2014
+				</label>
+			</div>
+		</div>
+
+		<button type="submit" class="btn btn-warning btn-lg">Signup</button>
+	</form>
 
 </div>
-</body>
-</html>

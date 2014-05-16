@@ -1,0 +1,51 @@
+
+<!doctype html>
+<html>
+<head>
+	<title>Project Learn: Home</title>
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> <!-- load bootstrap css -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
+	<style>
+		body 		{ padding-top:80px; }
+	</style>
+</head>
+<body>
+<div class="container">
+<nav class="navbar navbar-default" role="navigation">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="#">Project Learn</a>
+  </div>
+
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav">
+      <li <% if (active == 'home'){ %>class="active"<% } %>><a href="/home">Home</a></li>
+      <li <% if (active == 'profile'){ %>class="active"<% } %> ><a href="/profile" >Profile</a></li>
+      <li <% if (active == 'registration'){ %>class="active"<% } %>><a href="/registration">Registration</a></li>
+    </ul>
+    <ul class="navbar-nav nav pull-right" data-ng-show="global.authenticated">
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+        Welcome <%= user.local.firstName%> <b class="caret"></b>
+      </a>
+            <ul class="dropdown-menu">
+                <li><a href="/logout"><span class="fa fa-sign-in"></span> Logout</a></li>
+            </ul>
+        </li>
+    </ul>
+  </div><!-- /.navbar-collapse -->
+</nav>
+<%-body -%>
+
+</div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+</body>
+</html>

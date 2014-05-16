@@ -6,6 +6,8 @@ Purpose; This is the main file to setup environment and start the application
 //Setup the required dependencies
 
 var express = require('express');
+var engine = require('ejs-locals');
+
 var app      = express();
 var port     = process.env.PORT || 3000;
 var mongoose = require('mongoose');
@@ -26,7 +28,7 @@ app.configure(function(){
 	app.use(express.logger('dev')); // log every request to the console
 	app.use(express.cookieParser()); // read cookies (needed for auth)
 	app.use(express.bodyParser()); // get information from html forms
-
+	app.engine('ejs',engine);
 	app.set('view engine', 'ejs'); // set up ejs for templating
 
 	// required for passport

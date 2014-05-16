@@ -162,7 +162,12 @@ module.exports = function(passport) {
                         } else {
                             // if there is no user, create them
                             var newUser            = new User();
+                            //Create a local profile
+                            newUser.local.firstName = profile.name.givenName;
+                            newUser.local.lastName = profile.name.familyName;
+                            newUser.local.email = profile.emails[0].value;
 
+                            //Create Facebook profile
                             newUser.facebook.id    = profile.id;
                             newUser.facebook.token = token;
                             newUser.facebook.name  = profile.name.givenName + ' ' + profile.name.familyName;
@@ -237,6 +242,10 @@ module.exports = function(passport) {
                         } else {
                             // if there is no user, create them
                             var newUser                 = new User();
+                              //Create a local profile
+                            //newUser.local.firstName = profile.name.givenName;
+                            //newUser.local.lastName = profile.name.familyName;
+                            newUser.local.email = profile.emails[0].value;
 
                             newUser.twitter.id          = profile.id;
                             newUser.twitter.token       = token;
@@ -312,6 +321,11 @@ module.exports = function(passport) {
                             return done(null, user);
                         } else {
                             var newUser          = new User();
+                            //Create a local profile
+                            newUser.local.firstName = profile.name.givenName;
+                            newUser.local.lastName = profile.name.familyName;
+                            newUser.local.email = profile.emails[0].value;
+
 
                             newUser.google.id    = profile.id;
                             newUser.google.token = token;

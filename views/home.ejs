@@ -1,49 +1,11 @@
-<!-- views/index.ejs -->
-<!doctype html>
-<html>
-<head>
-	<title>Project Learn: Home</title>
-	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> <!-- load bootstrap css -->
-	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
-	<style>
-		body 		{ padding-top:80px; }
-	</style>
-</head>
-<body>
-<div class="container">
-<nav class="navbar navbar-default" role="navigation">
-  <!-- Brand and toggle get grouped for better mobile display -->
-  <div class="navbar-header">
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-      <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-    <a class="navbar-brand" href="#">Project Learn</a>
-  </div>
 
-  <!-- Collect the nav links, forms, and other content for toggling -->
-  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
-      <li><a href="#">Link</a></li>
-    </ul>
-  </div><!-- /.navbar-collapse -->
-</nav>
+<% layout('layout') -%>
 
-
-	<div class="jumbotron text-center">
-		<h1><span class="fa fa-home"></span>What would you like to do?</h1>
-		<p>Select</p>
-		<a href="/profile" class="btn btn-default"><span class="fa fa-user"></span> View Manage Profile</a>
-		<a href="/registration" class="btn btn-default"><span class="fa fa-calendar"></span> Register for Event</a>
-		<a href="/customerservice" class="btn btn-default"><span class="fa fa-desktop"></span> Customer Service</a>
-		<a href="/logout" class="btn btn-default"><span class="fa fa-sign-in"></span> Logout</a>
-	</div>
-
+<div class="jumbotron text-center">
+	<h1><span class="fa fa-home"></span>What would you like to do?</h1>
+	<p>Select</p>
+	<a href="/profile" class="btn btn-default"><span class="fa fa-user"></span> View Manage Profile</a>
+	<a href="/registration" class="btn btn-default"><span class="fa fa-calendar"></span> Register for Event</a>
+	<a href="/customerservice" class="btn btn-default"><span class="fa fa-desktop"></span> Customer Service</a>
+	<a href="/logout" class="btn btn-default"><span class="fa fa-sign-in"></span> Logout</a>
 </div>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
-</body>
-</html>
